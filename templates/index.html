@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>ACME Financial Group</title>
+</head>
+
+<body>
+    <h1>Special Loan Program</h1>
+	
+    <div id="apply">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="address" placeholder="Address">
+        <button onclick="add_application()">Apply</button>
+    </div>
+
+    <br>
+
+    <div id="application_number">
+        <input type="text" id="app_num" placeholder="Application Number">
+        <button onclick="get_application()">Get Application</button>
+    </div>
+
+    <div id="add_note">
+        <input type="text" id="note" placeholder="Note">
+        <button onclick="add_note()">Add Note</button>
+    </div>
+
+    <div id="status">
+        <select id="new_status" name="new_status">
+            <option value="Not_Found">Not Found</option>
+            <option value="Recieved">Recieved</option>
+            <option value="Processing">Processing</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+        <button onclick="change_status()">Change Status</button>
+        <button onclick="check_status()">Check Status</button>
+    </div>
+
+
+    <div id="return">
+    <!-- Return data will be displayed here dynamically -->
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

@@ -1,4 +1,2 @@
 flask
 pymongo
-sqlite3
-python-dotenv
